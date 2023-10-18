@@ -1,1 +1,0 @@
-break 2 = stop switch  nested in other loop. and loop.
