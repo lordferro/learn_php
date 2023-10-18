@@ -26,6 +26,7 @@ function getContent(string $fileName, ?callable $transactionHandler = null): arr
 
     $transactions = [];
 
+    // by calling this we skip first row;
     fgetcsv($file);
 
     while (($transaction = fgetcsv($file)) !== false) {
