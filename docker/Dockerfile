@@ -7,10 +7,8 @@ RUN apt-get update && apt-get install -y \
     vim \
     unzip
 
-   RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# install the PDO and enable mysql driver
-   RUN docker-php-ext-install pdo pdo_mysql 
-
+RUN docker-php-ext-install pdo pdo_mysql
 
 WORKDIR /var/www
